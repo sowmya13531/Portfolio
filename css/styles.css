@@ -208,6 +208,8 @@ section {
   font-size: 2.1rem;
   text-align: center;
   line-height: 1.7;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ================== SKILLS GRID ================== */
@@ -354,6 +356,8 @@ section {
   font-size: 2.1rem;
   text-align: center;
   line-height: 1.7;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .project-grid {
@@ -429,6 +433,8 @@ section {
   background: linear-gradient(90deg, #bb229a, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
