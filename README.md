@@ -7,8 +7,8 @@ The website is deployed across multiple platforms(Netlify, Vercel, GithubPages) 
 
 ## 🚀 Live Demo
 - **GitHub Pages:** https://your-username.github.io/portfolio  
-- **Vercel:** https://your-portfolio.vercel.app  
-- **Netlify:** https://sowmyakanithiportfolio.netlify.app/ 
+- **Vercel:** [https://your-portfolio.vercel.app](https://sowmya-kanithi-portfolio.vercel.app/)  
+- **Netlify:** [https://sowmyakanithiportfolio.netlify.app/](https://sowmyakanithiportfolio.netlify.app/) 
 
 ## 🛠️ Tech Stack
 
