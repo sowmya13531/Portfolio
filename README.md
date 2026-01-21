@@ -30,5 +30,7 @@ The website is deployed across multiple platforms(Netlify, Vercel, GithubPages) 
 - Fast loading and optimized assets
 - Deployed on multiple platforms
 
-└── README.md
+**...Get in Touch...**
+# *Sowmya Kanithi*
+## AIMLEngineer | Software Engineer
 
