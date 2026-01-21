@@ -26,7 +26,9 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   width: 100%;
-  overflow-x: hidden;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
 }
 
 /* ================== HEADER ================== */
