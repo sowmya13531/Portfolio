@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sowmya Kanithi | Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+
+<!-- HEADER -->
+<header class="header">
+  <a href="#home" class="brand-logo">Sowmya Kanithi</a>
+  <div class="bx bx-menu" id="menu-icon"></div>
+
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+
+<!-- HOME -->
+<section class="home reveal" id="home">
+  <div class="home-content">
+    <h1>Hey, I'm <span>Sowmya Kanithi</span></h1>
+    <h3 class="typing-text"><span id="typing"></span></h3>
+
+    <p>
+      AI & Machine Learning Engineer focused on NLP, Generative AI,
+      and building intelligent real-world applications.
+    </p>
+
+    <div class="btn-box">
+      <a href="assets/Sowmya_Kanithi_Resume.pdf" class="btn" download>Download Resume</a>
+      <a href="#about" class="btn">About Me</a>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section class="about reveal" id="about">
+  <h2 class="heading">About <span>Me</span></h2>
+
+  <div class="about-content">
+    <p>
+      AI & Machine Learning Engineer with strong fundamentals in Machine Learning, NLP, and Generative AI.
+    </p>
+    <p>
+      Hands-on experience building end-to-end ML and AI systems, including RAG pipelines, NLP models, and deployed applications.
+    </p>
+    <p>
+      Skilled in translating complex data and models into scalable, practical solutions with real-world impact.
+      Strong problem-solving mindset with a passion for continuous learning and staying updated with emerging AI technologies.
+    </p>
+    <p>
+      Self-driven, disciplined, and growth-oriented individual with a focus on building high-quality, production-ready systems.
+    </p>
+    <p> 
+      I am deeply curious about global technological innovations and continuously explore advancements in AI, ML, and Deep Learning.
+    </p>
+    <p>
+      Along with AI and ML, I have strong front-end development skills , Data Science and am currently learning full-stack development to deliver end-to-end solutions.
+    </p>
+
+    <div class="btn-box">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#skills" class="btn">View My Skills</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SKILLS -->
+<section class="skills reveal" id="skills">
+  <h2 class="heading">My <span>Skills</span></h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <div class="skill-tags">
+        <span>Python</span>
+        <span>C / C++</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+
+    <div class="skill-card">
+      <h3>Machine Learning & Deep Learning</h3>
+      <div class="skill-tags">
+        <span>NumPy</span>
+        <span>Pandas</span>
+        <span>Seaborn</span>
+        <span>Matplotlib</span>
+        <span>Scikit-learn</span>
+        <span>YOLO</span>
+        <span>OpenCV</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Natural Language Processing</h3>
+      <div class="skill-tags">
+        <span>NLTK</span>
+        <span>spaCy</span>
+        <span>Gensim</span>
+        <span>TF-IDF</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>LLM & Generative AI</h3>
+      <div class="skill-tags">
+        <span>Sentence Transformers</span>
+        <span>Prompt Engineering</span>
+        <span>LLaMA</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Retrieval-Augmented Generation (RAG)</h3>
+      <div class="skill-tags">
+        <span>LangChain</span>
+        <span>FAISS</span>
+        <span>Vector Databases</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Front-End</h3>
+      <div class="skill-tags">
+        <span>HTML/CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+
+    <div class="skill-card">
+      <h3>Deployment</h3>
+      <div class="skill-tags">
+        <span>Streamlit</span>
+        <span>Gradio</span>
+        <span>Git/GitHub</span>
+        <span>Hugging Face Spaces</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Tools & Platforms</h3>
+      <div class="skill-tags">
+        <span>Jupyter Notebook</span>
+        <span>Google Colab</span>
+        <span>VS Code</span>
+        <span>PyCharm</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- PROJECTS (SKILL-CARD STYLE GRID) -->
+<section class="projects reveal" id="projects">
+  <h2 class="heading">My <span>Projects</span></h2>
+
+  <!-- ===== HuggingFace Spaces Deployed Projects ===== -->
+  <h3 class="sub-heading">🤗 HuggingFace Spaces – Deployed Projects</h3>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <a href="https://github.com/sowmya13531/RAG.git" target="_blank" rel="noopener noreferrer">
+        <h3>RAG</h3>
+      </a>
+
+      <p>
+        A Retrieval-Augmented Generation (RAG) application that allows users to upload many documents formats(PDF,TXT, DOCX) and ask questions get grounded answers without hallucinations.
+      </p>
+
+      <div class="project-tags">
+        <span>LangChain</span>
+        <span>FAISS</span>
+        <span>Python</span>
+        <span>HuggingFace Spaces</span>
+        <span>FLAN-T5</span>
+        <span>Gradio</span>
+      </div>
+
+      <a class="project-link" href="https://huggingface.co/spaces/Sowmya135/RetrievalAugmentedGenerator" target="_blank" rel="noopener noreferrer">
+        <span>LIVE</span>
+      </a>
+    </div>
+
+    <div class="project-card">
+      <a href="https://github.com/sowmya13531/URL-Defender.git" target="_blank" rel="noopener noreferrer">
+        <h3>URL-Defender</h3>
+      </a>
+
+      <p>
+        A web-based application that detects whether a given URL is benign or malware or phishing or defacement using a machine learning model trained on labeled URL data.
+      </p>
+
+      <div class="project-tags">
+        <span>Gradio</span>
+        <span>HuggingFace Spaces</span>
+        <span>Python</span>
+        <span>Machine Learning</span>
+      </div>
+
+      <a class="project-link" href="https://huggingface.co/spaces/Sowmya135/URL-threat-detector" target="_blank" rel="noopener noreferrer">
+        <span>LIVE</span>
+      </a>
+    </div>
+
+    <div class="project-card">
+      <a href="https://github.com/sowmya13531/Simple-RAG-Application.git" target="_blank" rel="noopener noreferrer">
+        <h3>Multi PDF RAG Chatbot</h3>
+      </a>
+
+      <p>
+        A Retrieval-Augmented Generation (RAG) application that allows users to upload multiple PDF documents and ask natural-language questions.
+      </p>
+
+      <div class="project-tags">
+        <span>Gradio</span>
+        <span>HuggingFace Spaces</span>
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>Senetnce Transformers</span>
+        <span>Google FLAN-T5</span>
+      </div>
+
+      <a class="project-link" href="https://huggingface.co/spaces/Sowmya135/RAG" target="_blank" rel="noopener noreferrer">
+        <span>LIVE</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- == Other GitHub Projects == -->
+<h3 class="sub-heading">📂 Projects</h3>
+
+<div class="project-grid">
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/LocalRAG-LLM.git" target="_blank" rel="noopener noreferrer">
+      <h3>LocalRAG-LLM</h3>
+    </a>
+    <p>
+      An AI assistant using a local LLaMA 3.2 via Ollama model, FAISS memory, and document-grounded retrieval.
+    </p>
+    <div class="project-tags">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Llama3.2</span>
+      <span>RAG</span>
+      <span>FAISS</span>
+      <span>AI</span>
+      <span>Ollama</span>
+      <span>Streamlit</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/LLaMA-powered-VoiceAI.git" target="_blank" rel="noopener noreferrer">
+      <h3>LLaMA-powered-VoiceAI</h3>
+    </a>
+    <p>
+      A fully offline, privacy-first Voice AI Assistant built using LLaMA 3.2 via ollama, capable of real-time speech interaction, conversational memory, and voice responses.
+    </p>
+    <div class="project-tags">
+      <span>Llama3.2</span>
+      <span>Ollama</span>
+      <span>Python</span>
+      <span>AI</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Object-Detection-Yolo.git" target="_blank" rel="noopener noreferrer">
+      <h3>Object-Detection-Yolo</h3>
+    </a>
+    <p>
+      Object detection using the YOLOv4 (You Only Look Once) algorithm, implemented with OpenCV and Python.
+    </p>
+    <div class="project-tags">
+      <span>Yolo</span>
+      <span>OpenCV</span>
+      <span>Python</span>
+    </div>
+  </div>
+
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/AI-based-Weapon-Detection-Surveillance-System-.git" target="_blank" rel="noopener noreferrer">
+      <h3>Weapon Detection Surveillance System</h3>
+    </a>
+    <p>
+      A real-time AI surveillance system built with YOLOv8 and Streamlit to detect weapons (guns, knives, rifles) from webcam, images, and videos.
+    </p>
+    <div class="project-tags">
+      <span>Yolov8</span>
+      <span>Streamlit</span>
+      <span>Python</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Open-Source-Multi-Agents.git" target="_blank" rel="noopener noreferrer">
+      <h3>Open-Source-Multi-Agents</h3>
+    </a>
+    <p>
+      A multi-agent AI system built using open-source models in Python. It demonstrates coordination between multiple AI agents specialized in research, calculations, finance, and computer vision—all without relying on paid APIs.
+    </p>
+    <div class="project-tags">
+      <span>Agents</span>
+      <span>Python</span>
+      <span>AI</span>
+    </div>
+  </div>
+
+
+
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/AgriPredict-Crop-Recommendation.git" target="_blank" rel="noopener noreferrer">
+      <h3>AgriPredict-Crop-Recommendation</h3>
+    </a>
+    <p>
+      A machine learning-powered system to recommend the most suitable crop based on soil and environmental parameters such as Nitrogen, Phosphorus, Potassium, temperature, humidity, pH, and rainfall.
+    </p>
+    <div class="project-tags">
+      <span>Pandas</span>
+      <span>Streamlit</span>
+      <span>Python</span>
+      <span>Scikit-learn</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Twitter-Sentiment-Analysis-NLP.git" target="_blank" rel="noopener noreferrer">
+      <h3>Twitter-Sentiment-Analysis-NLP</h3>
+    </a>
+    <p>
+      A Twitter Sentiment Analysis tool built with Natural Language Processing (NLP) and Machine Learning. It predicts whether a given tweet expresses Positive or Negative sentiment.
+    </p>
+    <div class="project-tags">
+      <span>Streamlit</span>
+      <span>NLP</span>
+      <span>Python</span>
+      <span>NLTK</span>
+      <span>Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Product-Discovery-Engine-ML.git" target="_blank" rel="noopener noreferrer">
+      <h3>Product-Discovery-Engine-ML</h3>
+    </a>
+    <p>
+      A ML NLP based product recommendation system that suggests the Top 10 most similar products to a selected item.
+    </p>
+    <div class="project-tags">
+      <span>Streamlit</span>
+      <span>NLP</span>
+      <span>Python</span>
+      <span>Cosine Similarity</span>
+      <span>Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/A-Mini--Resume-ATS-System.git" target="_blank" rel="noopener noreferrer">
+      <h3>A-Mini-Resume-ATS-System</h3>
+    </a>
+    <p>
+      A powerful web app that analyzes resumes, predicts job categories using machine learning, NLP and calculates ATS (Applicant Tracking System) keyword match scores against job descriptions.
+    </p>
+    <div class="project-tags">
+      <span>Streamlit</span>
+      <span>NLP</span>
+      <span>Python</span>
+      <span>Scikit-learn</span>
+      <span>Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Brain-Tumor-Classification-Using-Deep-Learning.git" target="_blank" rel="noopener noreferrer">
+      <h3>Brain-Tumor-Classification-Using-Deep-Learning</h3>
+    </a>
+    <p>
+      Brain tumors are abnormal growths of cells within the brain that can be life-threatening if not detected early. Accurate and timely diagnosis is crucial for effective treatment.
+    </p>
+    <div class="project-tags">
+      <span>Deep Learning</span>
+      <span>Python</span>
+      <span>Machine Learning</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Spam-Emails-SMS-Classifier.git" target="_blank" rel="noopener noreferrer">
+      <h3>Spam-Emails-SMS-Classifier</h3>
+    </a>
+    <p>
+      A machine learning-based web application that classifies text messages and emails as Spam or Ham (Not Spam) using Natural Language Processing (NLP) techniques and a pre-trained classifier.
+    </p>
+    <div class="project-tags">
+      <span>Machine Learning</span>
+      <span>NLP</span>
+      <span>Streamlit</span>
+      <span>Python</span>
+      <span>NLTK</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Movie-Recommendation-System-using-Ml-in-python.git" target="_blank" rel="noopener noreferrer">
+      <h3>Movie-Recommendation-System-using-Ml-in-python</h3>
+    </a>
+    <p>
+      A content-based Movie Recommendation System built using Python. It suggests similar movies based on genres, overview, crew, director, and keywords using NLP techniques.
+    </p>
+    <div class="project-tags">
+      <span>Machine Learning</span>
+      <span>TF-IDF</span>
+      <span>NLP</span>
+      <span>Cosine Similarity</span>
+      <span>Python</span>
+      <span>DiffLib</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="https://github.com/sowmya13531/Customer-Churn-Prediction-with-ANN.git" target="_blank" rel="noopener noreferrer">
+      <h3>Customer-Churn-Prediction-with-ANN</h3>
+    </a>
+    <p>
+      Customer churn prediction is the process of identifying customers who are likely to leave a business. In this project, we analyze a telecom dataset to predict whether a customer will churn or not.
+    </p>
+    <div class="project-tags">
+      <span>Machine Learning</span>
+      <span>ANN</span>
+      <span>Deep Learning</span>
+      <span>Python</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+
+  <p class="contact-text">
+    Let’s collaborate, build something impactful, or discuss opportunities.
+  </p>
+
+  <p class="contact-grow">
+    🤝Let's GROW Together 🌱🚀
+  </p>
+
+  <div class="home-sci">
+    <a href="mailto:kanithisowmya2005@gmail.com" aria-label="Email">
+      <i class="bx bx-envelope"></i>
+    </a>
+    <a href="tel:+919153139555" aria-label="Phone">
+      <i class="bx bx-phone-call"></i>
+    </a>
+    <a href="https://linkedin.com/in/sowmya-kanithi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="bx bxl-linkedin"></i>
+    </a>
+    <a href="https://github.com/sowmya13531" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <i class="bx bxl-github"></i>
+    <a href="https://facebook.com/SowmyaKanithii" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <i class="bx bxl-facebook"></i>
+    <a href="https://twitter.com/kanithisowmyaa" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+      <i class="bx bxl-twitter"></i>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 Sowmya Kanithi. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
