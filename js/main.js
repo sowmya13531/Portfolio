@@ -30,13 +30,14 @@ window.addEventListener('load', revealOnScroll);
 
 // ================= TYPING ANIMATION =================
 const roles = [
-  "Machine Learning Engineer",
-  "AI / ML",
-  "NLP",
-  "GenAI / AI Enthusiast",
-  "Python Developer",
-  "Front End Developer",
-  "Full Stack Learner"
+  "Machine Learning Engineer ",
+  "Artificial Intelligence ",
+  "NLP Engineer ",
+  "LLM & RAG Systems Architect ",
+  "Generative AI Developer ",
+  "Python Developer ",
+  "Front End Developer ",
+  "Full Stack Learner "
 ];
 
 let roleIndex = 0;
@@ -66,3 +67,4 @@ function typeEffect() {
 }
 
 typeEffect();
+
