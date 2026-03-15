@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Initializing AI Portfolio</title>
+
+<style>
+
+body{
+  background:#020617;
+  color:#4cc9ff;
+  font-family:Courier New, monospace;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.boot-screen{
+  width:700px;
+}
+
+#boot-text{
+  white-space:pre-line;
+  font-size:18px;
+}
+
+.spinner{
+  margin-top:20px;
+  width:40px;
+  height:40px;
+  border:4px solid rgba(21,101,192,0.2);
+  border-top:4px solid #1565C0;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{ transform:rotate(360deg); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="boot-screen">
+
+<pre id="boot-text"></pre>
+
+<div class="spinner"></div>
+
+</div>
+
+<script>
+
+const lines = [
+"> Initializing AI Engineer Portfolio...",
+"> Loading Sowmya Kanithi Profile...",
+"> System READY",
+"> Sowmya's Portfolio Launching...",
+"> Welcome To My Portfolio..."
+];
+
+let i = 0;
+
+function showText(){
+
+if(i < lines.length){
+
+document.getElementById("boot-text").innerHTML += lines[i] + "\n";
+
+i++;
+
+setTimeout(showText,700);
+
+}else{
+
+setTimeout(()=>{
+window.location.href="index.html";
+},2000);
+
+}
+
+}
+
+showText();
+
+</script>
+
+</body>
+</html>
