@@ -1,93 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>Initializing Sowmya Kanithi Portfolio</title>
-
-<style>
-
-body{
-  background:#020617;
-  color:#4cc9ff;
-  font-family:Courier New, monospace;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-
-.boot-screen{
-  width:700px;
-}
-
-#boot-text{
-  white-space:pre-line;
-  font-size:18px;
-}
-
-.spinner{
-  margin-top:20px;
-  width:40px;
-  height:40px;
-  border:4px solid rgba(21,101,192,0.2);
-  border-top:4px solid #1565C0;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  100%{ transform:rotate(360deg); }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050912">
+  <meta name="description" content="Sowmya Kanithi — AI Engineer building intelligent, agentic and cloud-native systems across ML, GenAI, RAG, AWS, Azure and full-stack engineering.">
+  <meta property="og:title" content="Sowmya Kanithi — AI Engineer">
+  <meta property="og:description" content="AI engineering across learning, reasoning, orchestration, software and cloud infrastructure.">
+  <meta property="og:type" content="website">
+  <title>Sowmya Kanithi — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes sowmyaShimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes sowmyaEntrance {
+      0% { opacity: 0; transform: translateY(14px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes greetingFade {
+      0% { opacity: 0; transform: translateY(8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero-greeting-anim {
+      opacity: 0;
+      animation: greetingFade 0.7s ease-out 0.05s forwards;
+    }
+  </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="boot-screen">
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-orbit"><span></span><i></i><b>SK</b></div>
+    <div class="loader-text">BOOTING / INTELLIGENT SYSTEMS</div>
+  </div>
 
-<pre id="boot-text"></pre>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<div class="spinner"></div>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a href="#top" class="brand" data-magnetic>
+        <span class="brand-symbol">SK</span>
+        <span>Sowmya Kanithi</span>
+      </a>
+
+      <div class="desktop-nav">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#journey">Journey</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">Beyond</a>
+      </div>
+
+      <a class="nav-cta" href="assets/Sowmya_Kanithi_Resume.pdf" target="_blank" rel="noopener" data-track="RESUME_VIEWED">Resume <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">Beyond</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow reveal">SOFTWARE ARCHITECTURE | AI SYSTEMS</div>
+
+          <p class="hero-greeting reveal hero-greeting-anim" style="font-family: 'Space Grotesk', sans-serif; font-size: 2rem; letter-spacing: 0.02em; color: var(--muted, #94a3b8); margin: 0 0 0.6rem 0; font-weight: 500; text-transform: uppercase;">I'm <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-style: italic; letter-spacing: 0.01em; background: linear-gradient(135deg, #ffffff 30%, var(--accent, #38d9ff)); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; opacity: 0; animation: sowmyaEntrance 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s forwards, sowmyaShimmer 4s ease-in-out 1.2s infinite;">Sowmya</span></p>
+
+          <h1 class="hero-title reveal" style="font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.08;"><span>AI</span><span class="outline-word">ENGINEER</span></h1>
+
+          <div class="hero-role reveal">
+            <span>Applied ML · Agentic Systems · GenAI / RAG · Cloud-Native Architecture</span>
+          </div>
+
+          <p class="hero-lead reveal">
+            <strong>Translating high-dimensional intelligence into resilient software pipelines.</strong>
+          </p>
+
+          <p class="hero-support reveal">
+            Architecting event-driven backends, stateful agent runtimes, and distributed vector indexing topologies engineered for fault-tolerant, low-latency enterprise execution.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#work" data-magnetic><span>Explore the work</span><b>↘</b></a>
+            <a class="button button-ghost" href="#contact" data-magnetic><span>Let's connect</span><b>↗</b></a>
+          </div>
+
+          <div class="hero-links reveal">
+
+  <a
+    href="assets/Sowmya_Kanithi_Resume.pdf"
+    class="resume-interface"
+    download="Sowmya_Kanithi_Resume.pdf"
+    aria-label="Download Sowmya Kanithi Resume"
+  >
+    <span class="resume-icon">↗</span>
+    <span class="resume-text">DOWNLOAD RÉSUMÉ</span>
+  </a>
 
 </div>
+        </div>
 
-<script>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit-shell orbit-one"></div>
+          <div class="orbit-shell orbit-two"></div>
+          <div class="orbit-shell orbit-three"></div>
+          <div class="orbit-core"><span class="core-pulse"></span><strong>AI</strong><small>LEARN → REASON → ACT</small></div>
+          <span class="orbit-node node-1">RAG</span>
+          <span class="orbit-node node-2">LLM</span>
+          <span class="orbit-node node-3">TOOLS</span>
+          <span class="orbit-node node-4">CLOUD</span>
+        </div>
+      </div>
 
-const lines = [
-"> Initializing AI Engineer Portfolio...",
-"> Loading Sowmya Kanithi Profile...",
-"> System READY",
-"> Sowmya's Portfolio Launching...",
-"> Welcome To My Portfolio..."
-];
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><div class="scroll-line"><i></i></div><span>01 / 09</span></div>
+    </section>
 
-let i = 0;
+    <!-- CAPABILITIES -->
+    <section id="capabilities" class="section section-capabilities">
+      <div class="section-head reveal">
+        <div class="section-index">01 — CORE CAPABILITIES</div>
+        <h2>Where machine cognition<br><em>becomes execution.</em></h2>
+        <p>Unifying neural architectures, autonomous agent runtimes, software integration, and system safety into a production-ready engineering foundation.</p>
+      </div>
 
-function showText(){
+      <div class="capability-grid">
+        <article class="cap-card cap-blue reveal" data-tilt data-clickfx>
+          <span class="card-number">01</span>
+          <div class="cap-icon icon-pulse">◎</div>
+          <h3>Intelligent Systems</h3>
+          <p>I architect multimodal neural networks, high-dimensional embedding spaces, and sub-second vector search pipelines built for real-time AI reasoning.</p>
+          <div class="tag-row"><span>Neural Models</span><span>Embedding Fabrics</span><span>Semantic RAG</span><span>Multimodal</span><span>Vector Space</span></div>
+        </article>
 
-if(i < lines.length){
+        <article class="cap-card cap-violet reveal" data-tilt data-clickfx>
+          <span class="card-number">02</span>
+          <div class="cap-icon icon-rotate">↻</div>
+          <h3>Agentic AI</h3>
+          <p>I design autonomous tool-calling loops, stateful orchestration runtimes, and multi-agent workflows with human-in-the-loop safety controls.</p>
+          <div class="tag-row"><span>Autonomous Loops</span><span>Tool Binding</span><span>State Machines</span><span>Agentic Governance</span><span>HITL</span></div>
+        </article>
 
-document.getElementById("boot-text").innerHTML += lines[i] + "\n";
+        <article class="cap-card cap-cyan reveal" data-tilt data-clickfx>
+          <span class="card-number">03</span>
+          <div class="cap-icon icon-flicker">⌁</div>
+          <h3>AI Engineering &amp; Full-Stack</h3>
+          <p>Building with Python, FastAPI, REST APIs, databases, React interfaces, Docker, integration, observability, and cloud deployment — taking AI from model to usable product.</p>
+          <div class="tag-row"><span>Python</span><span>FastAPI</span><span>React</span><span>APIs</span><span>Databases</span><span>Docker</span><span>Full-Stack</span></div>
+        </article>
 
-i++;
+        <article class="cap-card cap-electric reveal" data-tilt data-clickfx>
+          <span class="card-number">04</span>
+          <div class="cap-icon icon-diamond">◇</div>
+          <h3>Reliable AI</h3>
+          <p>Enforcing guardrails, validation, risk controls, structured logging, health checks, observability, and deliberate failure-path design to maintain predictable AI behavior.</p>
+          <div class="tag-row"><span>Guardrails</span><span>Validation</span><span>Risk Controls</span><span>Safety</span><span>Observability</span><span>Health Checks</span></div>
+        </article>
+      </div>
+    </section>
 
-setTimeout(showText,700);
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience-section">
+      <div class="section-head reveal">
+        <div class="section-index">02 — ENGINEERING IN PRACTICE</div>
+        <h2>From learning to<br><em>building in the real world.</em></h2>
+        <p>Presented as a progression — each role carrying more system-level responsibility than the last.</p>
+      </div>
 
-}else{
+      <div class="exp-list">
+        <!-- Item 01 -->
+        <article class="exp-item reveal" data-clickfx>
+          <div class="exp-item-header">
+            <span class="exp-index">01</span>
+            <span class="exp-arrow">↗</span>
+          </div>
+          <div class="exp-item-top">
+            <span class="exp-item-date">AUG 2024 — JAN 2025</span>
+            <h3>Machine Learning Intern</h3>
+            <p class="exp-company">InternshipStudio · Remote</p>
+          </div>
+          <p class="exp-item-desc">Worked across exploratory data analysis, feature engineering and model selection on structured datasets, laying the foundations of applied machine learning.</p>
+        </article>
 
-setTimeout(()=>{
-window.location.href="home.html";
-},2000);
+        <!-- Item 02 -->
+        <article class="exp-item reveal" data-clickfx>
+          <div class="exp-item-header">
+            <span class="exp-index">02</span>
+            <span class="exp-arrow">↗</span>
+          </div>
+          <div class="exp-item-top">
+            <span class="exp-item-date">2025</span>
+            <h3>Machine Learning Intern</h3>
+            <p class="exp-company">Talent-Trek e-Learning · Remote</p>
+          </div>
+          <p class="exp-item-desc">Applied preprocessing, model development and evaluation on real datasets, moving from academic concepts toward repeatable ML workflows.</p>
+        </article>
 
-}
+        <!-- Item 03 (Active Current Role) -->
+        <article class="exp-item exp-current reveal" data-clickfx>
+          <div class="exp-item-header">
+            <span class="exp-index">03</span>
+            <div class="exp-header-actions">
+              <span class="live-badge"><i class="badge-pulse"></i>AT THIS MOMENT HERE</span>
+              <span class="exp-arrow">↗</span>
+            </div>
+          </div>
+          <div class="exp-item-top">
+            <span class="exp-item-date">MAY 2026 — PRESENT</span>
+            <h3>AIML Intern</h3>
+            <p class="exp-company">Tachyon Technologies · Hyderabad</p>
+          </div>
+          <div class="turning-point">
+            <span class="turning-label">PARADIGM SHIFT: MODEL TO SYSTEM ARCHITECTURE</span>
+            <p>This role marked a shift from model-focused learning to engineering AI workflows that combine retrieval, agent orchestration, APIs and cloud infrastructure — reasoning about complete, deployable systems rather than isolated components.</p>
+          </div>
+          <ul class="exp-item-points">
+            <li>Engineering agentic AI applications with AWS Strands Agents SDK, Amazon Bedrock and Bedrock AgentCore, alongside RAG and FastAPI services.</li>
+            <li>Extending the same systems perspective into Azure AI, cloud workflows, safety controls and production-oriented observability.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-}
+    <!-- WORK -->
+    <section id="work" class="section work-section">
+      <div class="section-head reveal">
+        <div class="section-index">03 — ENGINEERED WORK</div>
+        <h2>Infrastructure stripped bare,<br><em>real-world systems.</em></h2>
+        <p>Choose an artifact to trace its data pipeline from initial breakdown to final deployment.</p>
+      </div>
 
-showText();
+      <div class="project-grid">
+        <button class="project-card project-feature reveal" data-tilt data-clickfx data-project="conference" data-track="PROJECT_OPENED:conference">
+          <div class="project-top"><span>01 / AGENTIC AI</span><span class="project-status">PUBLIC</span></div>
+          <div class="project-visual visual-agent"><i></i><i></i><i></i><i></i><b>AGENT GRAPH</b><small>REASON → TOOL → STATE → ACTION</small></div>
+          <h3>Conference Room Booking Agent</h3><p>Multi-agent booking workflow using AWS Strands, Bedrock AgentCore and DynamoDB.</p>
+          <div class="project-stack"><span>Strands</span><span>Bedrock</span><span>AgentCore</span><span>DynamoDB</span></div>
+          <a href="https://github.com/sowmya13531/conference.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
 
-</script>
+        <button class="project-card reveal" data-tilt data-clickfx data-project="truthx" data-track="PROJECT_OPENED:truthx">
+          <div class="project-top"><span>02 / MULTIMODAL AI</span><span class="project-status">PUBLIC</span></div>
+          <div class="project-visual visual-truth"><span>VISION</span><span>AUDIO</span><span>LIP-SYNC</span><span>PROVENANCE</span><b>FUSION</b></div>
+          <h3>TRUTHX</h3><p>Agentic multimodal digital-media forensics console combining multiple evidence signals into a single risk assessment.</p>
+          <div class="project-stack"><span>CV</span><span>Audio</span><span>Agentic AI</span><span>Forensics</span></div>
+          <a href="https://github.com/sowmya13531/TRUTHX.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
 
+        <button class="project-card reveal" data-tilt data-clickfx data-project="openworker" data-track="PROJECT_OPENED:openworker">
+          <div class="project-top"><span>03 / AGENT RUNTIME</span><span class="project-status">PUBLIC</span></div>
+          <div class="project-visual visual-runtime"><div>LLM</div><i>↻</i><div>TOOLS</div><i>↻</i><div>ACTION</div></div>
+          <h3>Mini-OpenWorker</h3><p>Hand-built agent execution loop, tool registry, risk governance and human-in-the-loop controls.</p>
+          <div class="project-stack"><span>Python</span><span>LLMs</span><span>Tools</span><span>Governance</span></div>
+          <a href="https://github.com/sowmya13531/Mini-OpenWorker.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
+
+        <button class="project-card reveal" data-tilt data-clickfx data-project="aura" data-track="PROJECT_OPENED:aura">
+          <div class="project-top"><span>04 / AI SAFETY</span><span class="project-status private">PRIVATE</span></div>
+          <div class="project-visual visual-guard"><span>REQUEST</span><i>→</i><span>VALIDATE</span><i>→</i><span>GUARD</span><i>→</i><span>DECIDE</span></div>
+          <h3>AURA — AI Guardrails</h3><p>Company project applying validation, Bedrock Guardrails and observability around an LLM service.</p>
+          <div class="project-stack"><span>FastAPI</span><span>Guardrails</span><span>DynamoDB</span><span>CloudWatch</span></div>
+          <span class="open-project">PROPRIETARY 🔒</span>
+        </button>
+
+        <button class="project-card reveal" data-tilt data-clickfx data-project="itticket" data-track="PROJECT_OPENED:itticket">
+          <div class="project-top"><span>05 / AZURE AI</span><span class="project-status private">PUBLIC</span></div>
+          <div class="project-visual visual-azure"><span>INGEST</span><i>→</i><span>KNOWLEDGE</span><i>→</i><span>REASON</span><i>→</i><span>ACTION</span></div>
+          <h3>IT Support Ticket Intelligence Agent</h3><p>Current build combining knowledge retrieval, durable workflows, Blob Storage and containerized Azure services.</p>
+          <div class="project-stack"><span>Azure AI</span><span>Durable Functions</span><span>Knowledge</span><span>Containers</span></div>
+          <a href="https://github.com/sowmya13531/Azure-AI.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
+
+        <button class="project-card reveal" data-tilt data-clickfx data-project="voiceai" data-track="PROJECT_OPENED:voiceai">
+          <div class="project-top"><span>06 / OFFLINE VOICE AI</span><span class="project-status">PUBLIC</span></div>
+          <div class="project-visual visual-voice"><span>SPEECH</span><i>→</i><span>MEMORY</span><i>→</i><span>LLAMA</span><i>→</i><span>VOICE</span></div>
+          <h3>LLaMA-Powered Offline Voice AI Assistant</h3><p>A privacy-first voice assistant running LLaMA 3.2 locally through Ollama.</p>
+          <div class="project-stack"><span>Ollama</span><span>LLaMA 3.2</span><span>STT</span><span>TTS</span></div>
+          <a href="https://github.com/sowmya13531/LLaMA-powered-VoiceAI.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
+
+        <button class="project-card reveal" data-tilt data-clickfx data-project="yolo" data-track="PROJECT_OPENED:yolo">
+          <div class="project-top"><span>07 / COMPUTER VISION</span><span class="project-status">PUBLIC</span></div>
+          <div class="project-visual visual-yolo"><span>IMAGE</span><i>→</i><span>YOLOv4</span><i>→</i><span>BOXES</span><i>→</i><span>LABELS</span></div>
+          <h3>Object Detection with YOLOv4</h3><p>Real-time multi-object detection using YOLOv4 and OpenCV.</p>
+          <div class="project-stack"><span>OpenCV</span><span>YOLOv4</span><span>NumPy</span><span>Python</span></div>
+          <a href="https://github.com/sowmya13531/Object-Detection-Yolo.git" class="open-project" target="_blank" rel="noopener noreferrer">GITHUB REPO ↗</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section journey-section">
+      <div class="section-head reveal">
+        <div class="section-index">04 — ENGINEERING JOURNEY</div>
+        <h2>Evolution of My Skills.<br><em>Growing step by step.</em></h2>
+        <p>Every skill builds on the last — from basic models to complete, production-ready AI systems.</p>
+      </div>
+      <div class="journey-map">
+        <div class="journey-line"><span id="journeyProgress"></span></div>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">FOUNDATION / 2024–2025</div><h3>Machine Learning → Deep Learning</h3><p>Built foundations across Python, data preparation, model development, NLP and computer vision through academic work and ML internships.</p></article>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">SYSTEMS / 2025</div><h3>Backend → APIs → Software</h3><p>Moved from isolated experiments toward service thinking: FastAPI, REST APIs, validation, databases and production-oriented engineering habits.</p></article>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">GENERATIVE AI / 2025–2026</div><h3>LLMs → Embeddings → RAG</h3><p>Worked with retrieval pipelines, semantic search, embeddings and knowledge systems — connecting model intelligence with external information.</p></article>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">AGENTIC AI / 2026</div><h3>Reasoning → Tools → Action</h3><p>Built agentic systems around tool calling, orchestration, governance and human approval using AWS Strands Agents SDK and Bedrock AgentCore.</p></article>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">CLOUD AI / NOW</div><h3>AWS → Azure → Cloud-native AI</h3><p>Engineering across AWS AI services while developing hands-on Azure capability around AI, Functions, knowledge systems, durable workflows and containers.</p></article>
+        <article class="journey-item reveal"><div class="journey-dot"></div><div class="journey-meta">NEXT HORIZON</div><h3>MCP → Governance → Intelligent Infrastructure</h3><p>Going deeper into Model Context Protocol, agent governance and the infrastructure required to make intelligent systems dependable.</p></article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section stack-section">
+      <div class="section-head reveal">
+        <div class="section-index">05 — TECHNICAL CONSTELLATION</div>
+        <h2>A stack built around<br><em>intelligent systems.</em></h2>
+        <p>Interactive capability map — select a domain to see the technologies behind the systems I build.</p>
+      </div>
+
+      <div class="stack-interface reveal">
+        <canvas id="stackCanvas" aria-hidden="true"></canvas>
+        <div class="stack-tabs">
+          <button class="stack-tab active" data-stack="ai">AI / GenAI</button>
+          <button class="stack-tab" data-stack="ml">ML / DL / NLP</button>
+          <button class="stack-tab" data-stack="backend">Backend / Full-Stack</button>
+          <button class="stack-tab" data-stack="cloud">AWS / Azure</button>
+          <button class="stack-tab" data-stack="data">Data / Retrieval</button>
+          <button class="stack-tab" data-stack="agents">Agents / Tools</button>
+          <button class="stack-tab" data-stack="dev">Dev / Delivery</button>
+        </div>
+
+        <div class="stack-display" id="stackDisplay">
+          <div class="capability-scan"></div>
+          <div class="stack-label">SELECTED CAPABILITY</div>
+          <div class="stack-index" id="stackIndex">01</div>
+          <h3 id="stackTitle">AI / GENERATIVE AI</h3>
+          <p id="stackText">Machine Learning · Deep Learning · NLP · LLMs · Generative AI · RAG · Embeddings · Vector Search · Multimodal AI</p>
+          <div class="stack-pills" id="stackPills"></div>
+          <div class="stack-orbit-lines"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section education-section">
+      <div class="section-head reveal">
+        <div class="section-index">06 — FOUNDATION</div>
+        <h2>Education &amp; credentials.</h2>
+        <p>Academic roots and specialized milestones that shaped my engineering path.</p>
+      </div>
+      <div class="education-grid">
+        <!-- Highlighted IIT Hyderabad Turning Point Card (First) -->
+        <a class="education-card reveal spotlight-card" data-clickfx href="https://www.linkedin.com/posts/sowmya-kanithi_iit-hyderabad-aiml-certification-activity-7459967984766423040-8Max" target="_blank" rel="noopener noreferrer" style="border: 2px solid var(--accent, #38d9ff); background: linear-gradient(135deg, rgba(56,217,255,0.1), rgba(15,23,42,0.6)); box-shadow: 0 0 25px rgba(56,217,255,0.15); transform: translateY(-4px); text-decoration: none; color: inherit; display: block;">
+          <span style="color: var(--accent, #38d9ff); font-weight: 700; letter-spacing: 0.05em;">★ PIVOT POINT / 2025 — 2026</span>
+          <h3 style="color: #fff;">AI &amp; ML with Drone Technologies ↗</h3>
+          <p>TiHAN, IIT Hyderabad × Masai</p>
+          <strong style="color: var(--accent, #38d9ff);">Specialized AI / ML Program</strong>
+        </a>
+
+        <article class="education-card reveal" data-clickfx>
+          <span>2022 — 2026</span>
+          <h3>B.Tech — Electronics &amp; Communication Engineering</h3>
+          <p>Rajiv Gandhi University of Knowledge Technologies, IIIT Ongole</p>
+          <strong>CGPA 8.6</strong>
+        </article>
+
+        <article class="education-card reveal" data-clickfx>
+          <span>CREDENTIAL</span>
+          <h3>AWS Technical Essentials</h3>
+          <p>Amazon Web Services</p>
+          <strong>Cloud Foundations</strong>
+        </article>
+
+        <a class="education-card reveal" data-clickfx href="https://www.linkedin.com/posts/sowmya-kanithi_iit-hyderabad-aiml-certification-activity-7459967984766423040-8Max" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <span>CREDENTIAL</span>
+          <h3>Specialized Program in AI &amp; ML ↗</h3>
+          <p>IIT Hyderabad</p>
+          <strong>AI / ML</strong>
+        </a>
+      </div>
+    </section>
+
+    <!-- BEYOND -->
+    <section id="about" class="section beyond-section">
+      <div class="section-head reveal">
+        <div class="section-index">07 — BEYOND THE BUILD</div>
+        <h2>Curiosity with<br><em>an engineering bias.</em></h2>
+        <p>What sits outside a technology list still shapes how I approach difficult systems.</p>
+      </div>
+
+      <div class="beyond-grid">
+        <article class="beyond-card radar-card reveal" data-tilt data-clickfx>
+          <div class="beyond-visual radar-visual"><i></i><i></i><i></i><b>SCAN</b></div>
+          <span class="beyond-n">01</span><h3>Emerging Technology</h3>
+          <p>I track technologies that can change how systems are designed, built, secured and operated.</p>
+        </article>
+
+        <article class="beyond-card fracture-card reveal" data-tilt data-clickfx>
+          <div class="beyond-visual fracture-visual"><span></span><span></span><span></span></div>
+          <span class="beyond-n">02</span><h3>Difficult Problems</h3>
+          <p>Complex subjects attract me because they reward patience, structured reasoning and continuous learning.</p>
+        </article>
+
+        <article class="beyond-card shield-card reveal" data-tilt data-clickfx>
+          <div class="beyond-visual shield-visual"><div>RISK</div><span>✓</span></div>
+          <span class="beyond-n">03</span><h3>Security &amp; Risk</h3>
+          <p>I view cybersecurity as a systems problem: understand exposure, reduce unnecessary risk and build resilience.</p>
+        </article>
+
+        <article class="beyond-card systems-card reveal" data-tilt data-clickfx>
+          <div class="beyond-visual systems-visual"><span>TECH</span><i>↔</i><span>SOCIETY</span></div>
+          <span class="beyond-n">04</span><h3>Systems &amp; Society</h3>
+          <p>I'm curious about how technology, infrastructure, economics and geopolitical forces interact.</p>
+        </article>
+
+        <article class="beyond-card wide independence-card reveal" data-tilt data-clickfx>
+          <div class="beyond-visual independence-visual"><span>LEARN</span><i>→</i><span>BUILD</span><i>→</i><span>OWN</span></div>
+          <span class="beyond-n">05</span><h3>Building Toward Independence</h3>
+          <p>The direction is simple: keep becoming more capable of learning independently, solving difficult problems, building useful systems and creating measurable value through engineering.</p>
+        </article>
+      </div>
+
+      <div class="belief-track reveal">
+        <div class="belief-line"><span id="beliefProgress"></span><i class="belief-runner"></i></div>
+        <div class="belief-words"><span>CURIOUS</span><span>UNDERSTAND</span><span>CHALLENGE</span><span>BUILD</span><span>IMPROVE</span><span>MOVE FORWARD</span></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-grid">
+        <div class="section-head reveal">
+          <div class="section-index">08 — CONNECT</div>
+          <h2>Let's engineer something<br><em>resilient.</em></h2>
+          <p>Whether it's an engineering role, a collaborative project, or a tough technical challenge in AI and cloud architecture — my inbox is open.</p>
+          <div class="contact-identity">
+            <span>HYDERABAD, TELANGANA · INDIA</span>
+          </div>
+        </div>
+
+        <div class="contact-panel reveal">
+          <a class="contact-primary" href="mailto:sowmyadevx@gmail.com" data-track="EMAIL_CLICKED"><span>Start a conversation ✉</span><b>↗</b></a>
+          <div class="contact-links">
+            <a href="https://linkedin.com/in/sowmya-kanithi" target="_blank" rel="noopener" data-track="LINKEDIN_CLICKED">💼 LinkedIn ↗</a>
+            <a href="https://github.com/sowmya13531" target="_blank" rel="noopener" data-track="GITHUB_CLICKED"> ⚡GitHub ↗</a>
+            <a href="resume.pdf" target="_blank" rel="noopener" data-track="RESUME_VIEWED">Resume ↗</a>
+          </div>
+          <div class="contact-card" style="display: flex; flex-direction: column; gap: 0.5rem; background: rgba(56, 217, 255, 0.04); border: 1px solid rgba(56, 217, 255, 0.15); padding: 1.25rem; border-radius: 12px; transition: all 0.3s ease;">
+  <span style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted, #94a3b8); font-weight: 600;">DIRECT CONTACT</span>
+  
+  <a href="tel:+919153139555" data-track="PHONE_CLICKED" style="display: inline-flex; align-items: center; gap: 0.75rem; color: #fff; text-decoration: none; font-weight: 500; font-size: 1.05rem;">
+    <!-- Phone SVG Icon -->
+    <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: rgba(56, 217, 255, 0.1); border: 1px solid rgba(56, 217, 255, 0.3); border-radius: 8px; color: var(--accent, #38d9ff);">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </span>
+    
+    <span style="font-size: 0.95rem; color: var(--accent, #38d9ff); letter-spacing: 0.05em; font-weight: 500;">
+      Phone ↗
+    </span>
+  </a>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-grid">
+        <div class="closing-big reveal">KEEP<br><span>LEARNING.</span><br>KEEP<br><span>BUILDING.</span></div>
+        <div class="closing-side reveal">
+          <div class="closing-line"></div>
+          <p>Technology moves forward through releases, frameworks, and architectures. Engineering grows deeper through understanding, execution, and relentless refinement.</p>
+          <strong>SOWMYA KANITHI</strong>
+          <small>AI ENGINEER · MACHINE LEARNING · AGENTIC SYSTEMS</small>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer>
+    <div class="footer-inner" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 1rem;">
+      <!-- Styled Name with Tech Accent -->
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="display: inline-block; width: 6px; height: 6px; background: var(--accent, #38d9ff); border-radius: 50%; box-shadow: 0 0 8px var(--accent, #38d9ff);"></span>
+        <span style="font-weight: 700; letter-spacing: 0.08em; background: linear-gradient(135deg, #fff 30%, var(--accent, #38d9ff)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SOWMYA KANITHI</span>
+      </div>
+
+      <span style="color: var(--muted, #94a3b8); font-size: 0.85rem; letter-spacing: 0.05em;">AI ENGINEER / 2026</span>
+
+      <!-- Location Badge with Icon -->
+      <div class="footer-location-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(56, 217, 255, 0.08); border: 1px solid rgba(56, 217, 255, 0.2); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.8rem; letter-spacing: 0.03em;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent, #38d9ff)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span style="color: var(--muted, #94a3b8);">Native:</span> 
+        <span style="color: #fff; font-weight: 500;">Srikakulam</span>
+        <span style="color: var(--accent, #38d9ff); opacity: 0.5; margin: 0 0.1rem;">•</span>
+        <span style="color: var(--muted, #94a3b8);">Base:</span> 
+        <span style="color: var(--accent, #38d9ff); font-weight: 500;">Hyderabad</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-layer" id="modalLayer" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <article class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close project">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
