@@ -377,7 +377,7 @@ button {
 .menu-toggle span:last-child { top: 20px; }
 .mobile-menu { display: none; }
 
-main, .site-header, footer {
+main, footer {
   position: relative;
   z-index: 2;
 }
@@ -2213,6 +2213,22 @@ main, .site-header, footer {
   to { opacity: 1; transform: none; }
 }
 
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.modal-tags span {
+  font: 8px var(--mono);
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: #89a6c9;
+  background: rgba(255, 255, 255, .012);
+}
+
 .modal-section {
   padding: 20px 0;
   border-top: 1px solid var(--line);
@@ -2250,6 +2266,62 @@ footer, .site-footer {
 }
 
 .footer-inner a:hover { color: var(--cyan); }
+
+/* ==========================================================================
+   Back to Top Button
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 998;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: rgba(8, 14, 26, .82);
+  backdrop-filter: blur(10px);
+  color: var(--cyan);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s, border-color .25s, box-shadow .25s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .3), 0 0 22px rgba(56, 217, 255, .18);
+  transform: translateY(-3px);
+}
+
+.back-to-top-arrow {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform .25s var(--ease);
+}
+
+.back-to-top:hover .back-to-top-arrow {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
 
 /* ==========================================================================
    Responsive Styles
