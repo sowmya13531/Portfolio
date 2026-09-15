@@ -168,11 +168,19 @@
     )
   ];
 
+  const backToTop =
+    document.getElementById("backToTop");
+
 
   function updateScrollUI() {
     header?.classList.toggle(
       "scrolled",
       scrollY > 30
+    );
+
+    backToTop?.classList.toggle(
+      "visible",
+      scrollY > 600
     );
 
     const max =
@@ -486,6 +494,21 @@
         }
       );
     });
+
+
+  /* ============================================================
+     Back to Top
+     ============================================================ */
+
+  backToTop?.addEventListener(
+    "click",
+    () => {
+      window.scrollTo({
+        top: 0,
+        behavior: reduced ? "auto" : "smooth"
+      });
+    }
+  );
 
 
   /* ============================================================
